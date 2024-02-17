@@ -18,7 +18,7 @@ const app = express();
 const baseUrl = process.env.AUTH0_BASE_URL;
 
 app.use(morgan('dev'));
-app.use(cors({ origin: baseUrl }));
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
