@@ -20,8 +20,8 @@ router.get(
 
     res.status(200).json({
       message: 'Featured products retrieved successfully',
-      req: JSON.stringify(req, null, 2),
-      res: JSON.stringify(res, null, 2),
+      // req: JSON.stringify(req, null, 2),
+      // res: JSON.stringify(res, null, 2),
     });
   })
 );
