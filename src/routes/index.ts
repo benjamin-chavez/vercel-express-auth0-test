@@ -17,11 +17,11 @@ router.get(
   '/private-route',
   asyncHandler(async (req, res, next) => {
     console.log(JSON.stringify(req.header));
+    const incomingHeaders = req.headers;
 
     res.status(200).json({
       message: 'Featured products retrieved successfully',
-      // req: JSON.stringify(req, null, 2),
-      // res: JSON.stringify(res, null, 2),
+      incomingHeaders: incomingHeaders,
     });
   })
 );
