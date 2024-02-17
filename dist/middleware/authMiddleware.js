@@ -10,6 +10,7 @@ const express_jwt_1 = require("express-jwt");
 const jwks_rsa_1 = __importDefault(require("jwks-rsa"));
 const issuerBaseUrl = process.env.AUTH0_ISSUER_BASE_URL;
 const audience = process.env.AUTH0_AUDIENCE || 'http://localhost:5000/';
+
 exports.checkJwt = (0, express_jwt_1.expressjwt)({
     secret: jwks_rsa_1.default.expressJwtSecret({
         cache: true,
