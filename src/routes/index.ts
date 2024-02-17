@@ -17,7 +17,7 @@ router.get(
   '/private-route',
   asyncHandler(async (req, res, next) => {
     console.log(JSON.stringify(req.header));
-    res.status(200).send({ message: 'This is a private route' });
+    res.status(200).send({ message: JSON.stringify(req.header) });
   })
 );
 
