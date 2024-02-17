@@ -17,7 +17,7 @@ router.get(
   '/private-route',
   asyncHandler(async (req, res, next) => {
     console.log(JSON.stringify(req.header));
-    res.status(200).send({ message: req });
+
     res.status(200).json({
       message: 'Featured products retrieved successfully',
       req: JSON.stringify(req, null, 2),
