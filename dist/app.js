@@ -28,4 +28,5 @@ app.use(errorMiddleware_1.generalErrorHandler);
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}!`);
 });
-exports.default = app;
+// export default app;
+module.exports = app;
