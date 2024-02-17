@@ -13,6 +13,7 @@ import {
 import routes from './routes/index';
 import { checkJwt } from './middleware/authMiddleware';
 
+const PORT = process.env.PORT || 5000;
 const app = express();
 const baseUrl = process.env.AUTH0_BASE_URL;
 
@@ -27,5 +28,9 @@ app.use('/api', checkJwt, routes);
 
 app.use(notFoundHandler);
 app.use(generalErrorHandler);
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}!`);
+});
 
 export default app;

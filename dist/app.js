@@ -13,6 +13,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const errorMiddleware_1 = require("./middleware/errorMiddleware");
 const index_1 = __importDefault(require("./routes/index"));
 const authMiddleware_1 = require("./middleware/authMiddleware");
+const PORT = process.env.PORT || 5000;
 const app = (0, express_1.default)();
 const baseUrl = process.env.AUTH0_BASE_URL;
 app.use((0, morgan_1.default)('dev'));
@@ -24,4 +25,7 @@ app.use((0, express_flash_1.default)());
 app.use('/api', authMiddleware_1.checkJwt, index_1.default);
 app.use(errorMiddleware_1.notFoundHandler);
 app.use(errorMiddleware_1.generalErrorHandler);
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}!`);
+});
 exports.default = app;

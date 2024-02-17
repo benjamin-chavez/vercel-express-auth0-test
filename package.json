@@ -5,8 +5,8 @@
   "description": "The backend of the Next.js-Express-Auth0 integration template. It's built using Express.js and provides API endpoints, authentication routes, and middleware configurations.",
   "homepage": "https://benjamin-chavez.com/blog/integrating-next.js-with-express.js-using-auth0-for-authentication",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
+    "start": "node dist/app.js",
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/app.ts",
     "build": "tsc"
   },
   "keywords": [
