@@ -23,8 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(flash());
-// checkJwt,
-app.use('/api', routes);
+
+app.use('/api', checkJwt, routes);
 
 app.use(notFoundHandler);
 app.use(generalErrorHandler);
